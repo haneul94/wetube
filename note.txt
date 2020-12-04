@@ -1,0 +1,31 @@
+두개는 같은 의미를 나타낸다.
+const handleHome = (req, res) => res.send('Hello from home ass');
+function handleHome(req, res){
+    res.send('Hello from home ass');
+}
+
+middleware : 다른 함수를 시작전에 먼저 들리는 함수 
+    - 예를들면 권한 체크같은 걸 할수 있다.
+    ex) app.use(betweenHome);   //betweenHome : middleware 이름
+        app.get("/", betweenHome, handleHome);
+
+- cookie-parser : cookie를 전달받아 사용할 수 있도록 만들어 줌
+    : 사용자 인증 같은곳에서 쿠키를 검사할때 사용
+- body-parser : 사용자가 웹사이트로 전달하는 정보들을 검사
+    : request 정보에서 form이나 json 형태로 된 body를 검사
+- helmet : application이 더 안전하도록 만들어 줌
+- morgan : application에서 발생하는 모든 일들을 logging함
+
+
+export : 다른곳에서 사용할수 있게 해줌 - 즉 다른 페이지에서 import해서 사용 가능
+
+Model : data
+View : dow does the data look : 데이터가 어떻게 보여지는지
+Controll : function that looks for the data : 데이터를 찾는 함수
+
+
+<.pug>
+p Hello = <p>Hello</p>
+
+
+        
