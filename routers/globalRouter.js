@@ -6,10 +6,10 @@ import { join, login, logout } from "../controllers/userController"
 const globalRouter = express.Router();
 
 globalRouter.get(routes.home, home);
-globalRouter.get(routes.search, logout);
-globalRouter.get(routes.join, search);
-globalRouter.get(routes.login, join);
-globalRouter.get(routes.logout, login);
+globalRouter.get(routes.search, search);
+globalRouter.get(routes.join, join);
+globalRouter.get(routes.login, login);
+globalRouter.get(routes.logout, logout);
 
 
 export default globalRouter;

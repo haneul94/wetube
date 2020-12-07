@@ -27,5 +27,11 @@ Controll : function that looks for the data : 데이터를 찾는 함수
 <.pug>
 p Hello = <p>Hello</p>
 
+export const home = (req, res) => res.render("home", {pageTitle : "Home"});
+    첫번째 인자 : 템플릿
+    두번째 인자 : 템플릿에 추가할 정보가 담긴 객체
+
+const {query:{ term: searchingBy }}  = req;
+= const searchingBy = req.query.term
 
         
