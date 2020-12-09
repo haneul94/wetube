@@ -1,9 +1,9 @@
 extends layouts/main
 
 block content
-    .form__container
-        form(action="/login", method="post")
-            input(type="email", name="email", placeholer="Emai")
-            input(type="password", name="password", placeholer="Password")
+    .form-container
+        form(action=routes.login, method="post")
+            input(type="email", name="email", placeholer="Emai", required=true)
+            input(type="password", name="password", placeholer="Password", required=true)
             input(type="submit", value="Log in")
         include partials/socialLogin

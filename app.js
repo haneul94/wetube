@@ -11,7 +11,8 @@ import routes from "./routes";
 
 const app = express();
 
-app.use(helmet());
+//app.use(helmet());
+app.use( helmet({ contentSecurityPolicy: false }));
 app.set("view engine", "pug");
 //미들웨어 사용
 app.use(cookieParser());
